@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="voteApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Vote</title>
+	<style>
+		.button {
+			width: 300px;
+
+			font-size: 100px;
+			border: 0px;
+			border-radius: 5px;
+			color: #fff;
+		}
+		.active {
+			border: 5px solid #DAEC8B;
+		}
+		.red {
+			background: #F7464A;
+		}
+		.blue {
+			background: #47D0BD;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="Chart.js"></script>
+</head>
+<body ng-controller="voteCtrl as vote">
+	<center>
+	<div id="canvas-holder">
+			<canvas id="chart-area" width="300" height="300"/>
+		</div>
+	<button class="button blue" id="blue" ng-click="btnClick('blue')">
+		YES
+	</button>
+	<button class="button red" id="red" ng-click="btnClick('red')">
+		NO
+	</button>
+	</center>
+
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+</body>
+</html>
